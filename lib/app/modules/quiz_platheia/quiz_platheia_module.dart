@@ -18,7 +18,7 @@ class QuizPlatheiaModule extends Module {
         ),
         ChildRoute(
           Routes.quizPageRoute,
-          child: (context, args) => const QuizPage(),
+          child: (context, args) => QuizPage(store: context.read()),
         )
       ];
 }

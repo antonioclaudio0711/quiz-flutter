@@ -31,12 +31,17 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.purple.shade300,
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text(
-              'Pontuação: 0',
-              style: TextStyle(fontSize: 15),
+            padding: const EdgeInsets.all(20.0),
+            child: BlocBuilder<QuizPlatheiaStore, QuizPlatheiaState>(
+              bloc: store,
+              builder: (context, state) {
+                return Text(
+                  'Pontuação: ${state.pointsNumber} de 5',
+                  style: const TextStyle(fontSize: 15),
+                );
+              },
             ),
           )
         ],

@@ -65,4 +65,11 @@ class QuizPlatheiaStore extends Cubit<QuizPlatheiaState> {
         break;
     }
   }
+
+  void incrementPoints({required int pointsNumber}) {
+    emit(state.copyWith(
+      state: const QuizPlatheiaSuccessState(),
+      pointsNumber: state.pointsNumber + 1,
+    ));
+  }
 }

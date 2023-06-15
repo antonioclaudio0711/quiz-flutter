@@ -37,14 +37,14 @@ class QuizPlatheiaState extends Equatable {
   final String selectedText;
   final int questionNumber;
   final String correctAnswer;
-  final bool isRight;
+  final int pointsNumber;
 
   const QuizPlatheiaState({
     this.state = const QuizPlatheiaInitialState(),
     this.selectedText = '',
     this.questionNumber = 1,
     this.correctAnswer = '',
-    this.isRight = false,
+    this.pointsNumber = 0,
   });
 
   QuizPlatheiaState copyWith({
@@ -52,14 +52,14 @@ class QuizPlatheiaState extends Equatable {
     String? selectedText,
     int? questionNumber,
     String? correctAnswer,
-    bool? isRight,
+    int? pointsNumber,
   }) {
     return QuizPlatheiaState(
       state: state ?? this.state,
       selectedText: selectedText ?? this.selectedText,
       questionNumber: questionNumber ?? this.questionNumber,
       correctAnswer: correctAnswer ?? this.correctAnswer,
-      isRight: isRight ?? this.isRight,
+      pointsNumber: pointsNumber ?? this.pointsNumber,
     );
   }
 
@@ -69,6 +69,6 @@ class QuizPlatheiaState extends Equatable {
         selectedText,
         questionNumber,
         correctAnswer,
-        isRight,
+        pointsNumber,
       ];
 }

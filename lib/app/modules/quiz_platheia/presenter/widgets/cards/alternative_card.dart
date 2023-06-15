@@ -45,6 +45,8 @@ class _AlternativeCardState extends State<AlternativeCard> {
               textButton: 'Próxima questão',
             ),
           );
+
+          store.incrementPoints(pointsNumber: store.state.pointsNumber);
         } else {
           showDialog(
             context: context,

@@ -8,7 +8,6 @@ class QuizDialog extends StatelessWidget {
     required this.onTapFunction,
     required this.textButton,
     required this.borderButtonColor,
-    this.correctAnswer,
   });
 
   final Color dialogBackgroundColor;
@@ -16,7 +15,6 @@ class QuizDialog extends StatelessWidget {
   final IconData icon;
   final VoidCallback onTapFunction;
   final String textButton;
-  final String? correctAnswer;
 
   @override
   Widget build(BuildContext context) {
@@ -55,24 +53,6 @@ class QuizDialog extends StatelessWidget {
                 ),
               ),
             ),
-            if (correctAnswer != null)
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 8.0,
-                  right: 20.0,
-                  left: 20.0,
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                      'A resposta correta é:',
-                    ),
-                    Text(
-                      correctAnswer!,
-                    ),
-                  ],
-                ),
-              ),
           ],
         ),
       ),

@@ -25,35 +25,38 @@ class QuizPlatheiaStore extends Cubit<QuizPlatheiaState> {
       case 1:
         emit(state.copyWith(
           state: const QuizPlatheiaSuccessState(),
-          correctAnswer: 'A) Práticas racistas',
+          correctAnswer: 'D) Preço abusivo dos ingressos',
         ));
         break;
 
       case 2:
         emit(state.copyWith(
           state: const QuizPlatheiaSuccessState(),
-          correctAnswer: 'B) dsivbspib',
+          correctAnswer: 'E) Lei Geral de Proteção de Dados (LGPD)',
         ));
         break;
 
       case 3:
         emit(state.copyWith(
           state: const QuizPlatheiaSuccessState(),
-          correctAnswer: 'C) woevbwoe',
+          correctAnswer:
+              'D) Identificar o torcedor infrator para que medidas restritivas/administrativas sejam tomadas com o intuito de promover a paz e a boa convivência nos eventos esportivos',
         ));
         break;
 
       case 4:
         emit(state.copyWith(
           state: const QuizPlatheiaSuccessState(),
-          correctAnswer: 'D)]sdoçlbçof',
+          correctAnswer:
+              'E) Sim, pois além de todo o banco de dados ter sido desenvolvido para esse suporte, todo o sistema foi pensado para que, independente do local, o software possa atender mais de um evento ao mesmo tempo.',
         ));
         break;
 
       case 5:
         emit(state.copyWith(
           state: const QuizPlatheiaSuccessState(),
-          correctAnswer: 'A) ~wodivkpdi',
+          correctAnswer:
+              'C) Utilizando o cruzamento de informações relacionadas ao reporte (data, horário, local, evento, usuário)',
         ));
         break;
 
@@ -70,6 +73,15 @@ class QuizPlatheiaStore extends Cubit<QuizPlatheiaState> {
     emit(state.copyWith(
       state: const QuizPlatheiaSuccessState(),
       pointsNumber: state.pointsNumber + 1,
+    ));
+  }
+
+  void resetGame() {
+    emit(state.copyWith(
+      state: const QuizPlatheiaSuccessState(),
+      selectedText: '',
+      questionNumber: 1,
+      pointsNumber: 0,
     ));
   }
 }

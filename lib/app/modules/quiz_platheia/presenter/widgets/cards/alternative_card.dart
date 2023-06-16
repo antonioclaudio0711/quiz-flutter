@@ -35,6 +35,7 @@ class _AlternativeCardState extends State<AlternativeCard> {
 
           if (store.state.questionNumber != 5) {
             showDialog(
+              barrierDismissible: false,
               context: context,
               builder: (context) => QuizDialog(
                 dialogBackgroundColor: const Color.fromARGB(255, 136, 211, 139),
@@ -51,6 +52,7 @@ class _AlternativeCardState extends State<AlternativeCard> {
             );
           } else {
             showDialog(
+              barrierDismissible: false,
               context: context,
               builder: (context) => QuizDialog(
                 dialogBackgroundColor: const Color.fromARGB(255, 136, 211, 139),
@@ -69,6 +71,7 @@ class _AlternativeCardState extends State<AlternativeCard> {
         } else {
           if (store.state.questionNumber != 5) {
             showDialog(
+              barrierDismissible: false,
               context: context,
               builder: (context) => QuizDialog(
                 dialogBackgroundColor: const Color.fromARGB(255, 231, 112, 104),
@@ -85,6 +88,7 @@ class _AlternativeCardState extends State<AlternativeCard> {
             );
           } else {
             showDialog(
+              barrierDismissible: false,
               context: context,
               builder: (context) => QuizDialog(
                 dialogBackgroundColor: const Color.fromARGB(255, 231, 112, 104),

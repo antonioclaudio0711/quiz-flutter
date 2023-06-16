@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:quiz_platheia/app/modules/quiz_platheia/presenter/widgets/dialog/quiz_dialog.dart';
 import 'package:quiz_platheia/app/modules/quiz_platheia/presenter/widgets/dialog/reset_quiz_dialog.dart';
-import 'package:quiz_platheia/app/utils/routes.dart';
 
 import '../../store/quiz_platheia_store.dart';
 
